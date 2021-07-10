@@ -1,24 +1,6 @@
-# README
+# Agenda App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+AgendaApp is my first Ruby On Rails application.
+Includes a simple CRUD method, with their respective interfaces, as well as a beautiful layout, taken by "https://www.designbombs.com/freebie/knight/"
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You can find my resume at "https://zazosresume.herokuapp.com/" or my github "https://github.com/zazos"
