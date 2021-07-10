@@ -1,0 +1,20 @@
+<div class="container" style="margin-top: 15em">
+  <p>
+    <h3><strong>First name:</strong></h3><%= @friend.first_name %>
+  </p>
+
+  <p>
+    <h3><strong>Last name:</strong></h3><%= @friend.last_name %>
+  </p>
+
+  <p>
+    <h3><strong>Email:</strong></h3><%= @friend.email %>
+  </p>
+
+  <p>
+    <h3><strong>Phone number:</strong></h3><%= @friend.phone_number %>
+  </p>
+
+  <%= link_to 'Edit', edit_friend_path(@friend) %> |
+  <%= link_to 'Back', friends_path %>
+</div>

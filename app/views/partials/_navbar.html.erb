@@ -1,0 +1,59 @@
+<!--navigation-->
+<section class="smart-scroll">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <%= link_to 'Agenda App', root_path, class:"navbar-brand heading-black" %>
+            <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+                    data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span data-feather="grid"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+            
+                    <% if user_signed_in? %>
+                        <li class="nav-item">
+                            <%= link_to "Friends List", friends_path, class:"nav-link" %>
+                        </li>                    
+                        <li class="nav-item">
+                            <%= link_to "Edit Profile", edit_user_registration_path, class:"nav-link" %>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
+                        </li>
+                    <% else %>
+                        <li class="nav-item">
+                            <%= link_to "Log In", new_user_session_path, class:"nav-link" %>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "Sign Up", new_user_registration_path, class:"nav-link" %>
+                        </li>
+                    <% end %>
+
+                    <% if current_page?(root_path) %>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#features">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#faq">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#contact_me">Contact Me</a>
+                        </li>
+                    <% else %>
+                        <li class="nav-item">
+                            <%= link_to "Features", root_path+"#features", class:"nav-link" %>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "FAQ", root_path+"#faq", class:"nav-link" %>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "Contact Me", root_path+"#contact_me", class:"nav-link" %>
+                        </li>
+                    <% end %>
+                    
+                </ul>
+            </div>
+        </nav>
+    </div>
+</section>
